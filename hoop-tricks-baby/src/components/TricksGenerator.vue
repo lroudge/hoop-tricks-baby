@@ -50,15 +50,6 @@ export default {
                 "Backpack",
                 "Helicopter"
             ],
-            tagColors: [
-                "pink",
-                "red",
-                "orange",
-                "green",
-                "cyan",
-                "blue",
-                "purple"
-            ],
             generatedCombo: []
         };
     },
@@ -73,12 +64,6 @@ export default {
                 else i--;
             }
             console.log(this.generatedCombo);
-        },
-        getRandomColor() {
-            // const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
-            let rand = Math.floor(Math.random() * this.tagColors.length);
-            console.log("Generated color = " + this.tagColors[rand]);
-            return this.tagColors[rand];
         }
     }
 };
@@ -92,11 +77,15 @@ h3 {
 ul {
     list-style-type: none;
     padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: space-around;
+    height: 10rem;
 }
 li {
     display: inline-block;
     margin: 0 10px;
-    font-size: 2em;
 }
 a {
     color: #42b983;
@@ -107,7 +96,12 @@ a {
     align-items: center;
     justify-content: center;
 }
+.ant-input-number {
+    width: 55px;
+}
 .ant-tag-pink {
     font-size: 1.2rem;
+    height: 2rem;
+    line-height: 2rem;
 }
 </style>
